@@ -1,0 +1,12 @@
+<div class="song-list">
+  
+     <div class="title"   (click)='goToRecommendList()'>推荐歌单</div>
+     <div class="song-content">
+         <ul>
+           <li *ngFor='let song of songList' (click)='goToRecommendDetailById(song)'>
+             <img src="{{song.picUrl}}" alt="">
+             <div class="name">{{song.name}}</div>
+           </li>
+         </ul>
+     </div>
+</div>

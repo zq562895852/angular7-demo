@@ -1,0 +1,25 @@
+<div class="music-list">
+   <div class="music-bg-title">
+     <div class="bg-img">
+
+     </div>
+      <div class="music-info">
+          <div class="left">
+              <img src="{{musicList[0]?.picUrl}}" alt="">
+              <span class="icon">歌单</span>
+              <i class="u-earp lsthd_num" data-reactid="9">129.5万</i>
+           </div>
+           <div class="right">
+             <div class="name">{{musicList[0]?.name}}</div>
+           </div>
+      </div>
+   </div>
+   <div class="music-song">
+     <div class="tag">
+         
+     </div>
+     <div class="song-list">
+       <app-cycle  [musicList]='musicList'></app-cycle>
+     </div>
+   </div>
+</div>

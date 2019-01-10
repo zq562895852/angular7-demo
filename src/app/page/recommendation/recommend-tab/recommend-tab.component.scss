@@ -1,0 +1,19 @@
+@import '../../../../assets/scss/var.scss';
+.recommend-tab{
+    
+    padding: 20px;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+         width:40px;
+         height: 40px;
+         padding: 5px;
+         color:#fff;
+         background-color: $mainColor;
+         font-size: 12px;
+         text-align: center;
+         border-radius: 50%;
+        }
+    }
+}

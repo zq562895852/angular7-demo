@@ -1,0 +1,20 @@
+<!-- <div class="show" (mouseenter)="stopPlay()" (mouseleave)="autoPlay()">
+  <span (click)="playPre()"></span>
+  <ul [@carousel] = 'state' (@carousel.done)="afterPlay()">
+    <li *ngFor="let img of bannerPic">
+       <img class="carouse-img" src="{{img.img}}" alt="">
+    </li>
+  </ul>
+  <span (click)="playNext()"></span>
+</div> -->
+<div class="swiper-container">
+  <ul class="swiper-wrapper">
+    <li *ngFor="let img of bannerList" class="swiper-slide">
+        <a href="{{img.url}}" routerLinkActive="active">
+          <img class="carouse-img" src="{{img.imageUrl}}" alt="">
+        </a>
+       
+    </li>
+  </ul>
+  <div class="swiper-pagination"></div>
+</div>

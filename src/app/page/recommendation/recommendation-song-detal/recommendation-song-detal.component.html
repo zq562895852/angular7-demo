@@ -1,0 +1,56 @@
+<div class="recommend-box">
+   <div class="top-des" >
+        <div class="bg-img"></div>
+        <div class="des-box">
+                <div class="left">
+                    <img src="{{recommendedSongDetail?.coverImgUrl}}" alt="">
+                    <span class="icon">歌单</span>
+                    <i class="u-earp lsthd_num" data-reactid="9">{{recommendedSongDetail?.playCount.toFixed(1)}}万</i>
+                </div>
+                <div class="right">
+                  <div class="name">{{recommendedSongDetail?.name}}</div>
+                  <div class="info">
+                      <img src="{{recommendedSongDetail?.creator?.backgroundUrl}}" alt="">
+                      <span>{{recommendedSongDetail?.creator?.nickname}}</span>
+                  </div>
+                </div>
+        </div>
+        
+   </div>
+   <div class="tags">
+        <div class="tag">
+                标签:
+                <span *ngFor="let tag of recommendedSongDetail?.tags">{{tag}}</span>
+        </div>
+        <div class="introduction">
+            简介：{{recommendedSongDetail?.description}}
+        </div>
+    </div>
+    <div class="song-list">
+        <div class="title">
+            歌曲列表
+        </div>
+        <div class="song">
+            <ul>
+                <li *ngFor="let song of recommendedSongDetail?.tracks;let i = index" (click)="goToPlay(song)">
+                    <div class="index">{{i+1}}</div>
+                    <div class="info">
+                        <div class="name">
+                            {{song.name}}
+                        </div>
+                        <div class="author" >
+                            <span *ngFor="let author of song.ar">
+                                {{author.name}} 
+                            </span>
+                            —
+                           <span>{{song.al.name}}</span>
+                        </div>
+                    </div>
+                    <div class="play-button">
+                            <span class="u-hmsprt sgich_ply" data-reactid="51"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

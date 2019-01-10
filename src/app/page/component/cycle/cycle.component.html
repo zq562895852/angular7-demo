@@ -1,0 +1,14 @@
+<div class="song-list">
+  <div class="music-bg-title">
+    
+  </div>
+  <div class="song-content">
+      <ul>
+        <li *ngFor='let song of musicList' (click)='goToRecommendDetailById(song)'>
+          <img src="{{song.picUrl}}" alt="">
+          <div class="name">{{song.name}}</div>
+        </li>
+      </ul>
+  </div>
+</div>
+

@@ -1,0 +1,72 @@
+// 引入material自定义主题支持
+@import '~@angular/material/theming';
+// 引入material公用的主题风格
+@include mat-core();
+// 自定义颜色
+// $primary: mat-palette($mat-indigo);
+// $accent:  mat-palette($mat-pink, A200, A100, A400);
+// $theme: mat-light-theme($primary, $accent);
+// $primary: mat-palette($mat-red); // 主色
+// $my-app-accent: mat-palette($mat-teal, A200, A100, A400); // 副色
+// $my-app-warn: mat-palette($mat-red); // 警告色
+// 主色
+$md-warn: (
+    50 : #fef6ed,
+    100 : #fce8d3,
+    200 : #fbd9b5,
+    300 : #f9c997,
+    400 : #f7be81,
+    500 : #f6b26b,
+    600 : #f5ab63,
+    700 : #f3a258,
+    800 : #f2994e,
+    900 : #ef8a3c,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffe7d5,
+    A700 : #ffd8bc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+// 主色
+$theme-primary: mat-palette($mat-red); 
+$theme-accent: mat-palette($mat-yellow, A400, A200, A600); // 副色
+// 警告
+$theme-warn: mat-palette($md-warn); 
+// 成功
+$theme-success: mat-palette($md-warn); 
+
+
+$theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn); 
+
+
+$theme2: mat-light-theme($theme-primary, $theme-success,$theme-accent); 
+
+@include angular-material-theme($theme);
+// @include angular-material-theme($theme2); 
+.body-light { 
+    // @include angular-material-theme($theme); 
+    // @include mat-core-theme($theme);
+    // @include mat-button-theme($theme-primary);
+} 
+
+.component-success { 
+    @include angular-material-theme($theme2); 
+}

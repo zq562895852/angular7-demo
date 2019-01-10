@@ -1,0 +1,20 @@
+@import '../../../../assets//scss/var.scss';
+.ms-header{
+//    height: 40px;
+   background: $mainColor;
+//    color:#fff;
+   font-size: 12px;
+//    line-height: 40px;
+   padding:  10px;
+  .topsvg{
+      width: 100px;
+  }
+  .load{
+      float: right;
+      color:#fff;
+      padding:3px 5px;
+      border: 1px solid #fff;
+      border-radius:20px;
+    //   border-top-right-radius: 50%;
+  }
+}

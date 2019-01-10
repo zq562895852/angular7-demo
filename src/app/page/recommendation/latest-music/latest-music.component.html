@@ -1,0 +1,11 @@
+<div class="song-list">
+  <div class="title">最新音乐</div>
+  <div class="song-content">
+      <ul>
+        <li *ngFor='let song of latestMusic' >
+          <img src="{{song.song.album.picUrl}}" alt="">
+          <div class="name">{{song.name}}</div>
+        </li>
+      </ul>
+  </div>
+</div>

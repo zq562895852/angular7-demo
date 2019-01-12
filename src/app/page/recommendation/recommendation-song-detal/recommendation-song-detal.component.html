@@ -5,7 +5,7 @@
                 <div class="left">
                     <img src="{{recommendedSongDetail?.coverImgUrl}}" alt="">
                     <span class="icon">歌单</span>
-                    <i class="u-earp lsthd_num" data-reactid="9">{{recommendedSongDetail?.playCount.toFixed(1)}}万</i>
+                    <i class="u-earp lsthd_num" data-reactid="9">{{(recommendedSongDetail?.playCount/10000).toFixed(1)}}万</i>
                 </div>
                 <div class="right">
                   <div class="name">{{recommendedSongDetail?.name}}</div>
